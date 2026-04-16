@@ -1,0 +1,122 @@
+#blink{
+    font-weight:900;
+    font-size:35px;
+    color: rgb(243, 199, 2);
+}
+
+.searcher{
+      padding-left: 50px;
+
+    width: 350%;
+     border-radius: 10px;
+     font-size: 20px;
+    background-size: 30px;
+    background-image: url('Images/searchicon.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 10px;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+}
+.acc{
+    font-size:20px;
+}
+.cato img{
+    height: 180px;
+    width: 130px;
+    cursor: pointer;
+}
+.scroll-container {
+  background-color: #ffffff;
+  overflow: auto;
+  padding: 0px;
+}
+
+
+.card {
+  width: 150px;
+  height: 256px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 136px;
+  height: 116px; 
+  object-fit: cover;
+}
+.card-title {font-size: 14px;}
+.card-content {
+  padding: 8px;
+}
+
+.card-text {
+  
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  white-space: nowrap;    /* Keeps text on one line */
+  overflow: hidden;       /* Hides the extra text */
+  text-overflow: ellipsis; /* Adds the '...' */
+}
+
+/* 1. Lock the card dimensions */
+.fixed-size-card {
+    
+  width: 170px;
+  height: 256px;
+  overflow: hidden;
+  flex: 0 0 auto;             /* Prevents flexbox from squishing the cards */
+  scroll-snap-align: start;
+}
+
+/* 2. Restrict the image height so it leaves room for text & buttons */
+.fixed-size-card .card-img-top {
+  height: 100px;
+  width: 100%;
+  background-color: #f8f9fa; 
+}
+
+/* 3. Turn the card body into a flex container to push the button down */
+.fixed-size-card .card-body {
+  padding: 8px; /* Shrinks Bootstrap's default massive padding */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 4. Truncate the title to one line with '...' */
+.fixed-size-card .card-title {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+/* 5. Handle the long description (Clean cut-off, no webkit) */
+.fixed-size-card .card-text:nth-of-type(1) {
+  font-size: 12px;
+  line-height: 1.2;
+  max-height: 2.4em; /* Allows exactly 2 lines of text */
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+/* 6. Push the price & button row to the bottom */
+.fixed-size-card .d-flex {
+  margin-top: auto !important; /* The magic rule that pins it to the bottom */
+           /* Vertically centers price with the button */
+}
+
+/* Minor tweak for the "500 ml" text */
+.fixed-size-card .card-text:nth-of-type(2) {
+  margin-bottom: 4px;
+}
+
+.overflow-x-auto{
+overflow-x:scroll; /* Hide horizontal scrollbar */
+  scrollbar-width: none;}
